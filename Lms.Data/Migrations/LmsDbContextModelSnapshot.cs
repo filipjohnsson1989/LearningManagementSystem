@@ -69,11 +69,13 @@ namespace Lms.Data.Migrations
 
             modelBuilder.Entity("Lms.Core.Entities.Module", b =>
                 {
-                    b.HasOne("Lms.Core.Entities.Course", null)
+                    b.HasOne("Lms.Core.Entities.Course", "Course")
                         .WithMany("Modules")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Course");
                 });
 
             modelBuilder.Entity("Lms.Core.Entities.Course", b =>
