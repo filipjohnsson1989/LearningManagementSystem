@@ -19,5 +19,6 @@ app.SeedDataAsync().GetAwaiter().GetResult();
 
 // Configure the HTTP request pipeline.
 
+app.MapControllers();
 
 app.Run();

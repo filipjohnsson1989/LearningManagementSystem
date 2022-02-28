@@ -8,8 +8,8 @@ public class LmsMappings : Profile
 {
     public LmsMappings()
     {
-        CreateMap<Course, CourseDto>();
-        CreateMap<Module, ModuleDto>();
+        CreateMap<Course, CourseDto>().ReverseMap();
+        CreateMap<Module, ModuleDto>().ReverseMap();
     }
 
 }
