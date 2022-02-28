@@ -10,6 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<LmsDbContext>(optionsAction =>
     optionsAction.UseSqlServer(builder.Configuration.GetConnectionString("LmsDbContext")));
 
+builder.Services.AddAutoMapper(typeof(LmsMappings));
+
 var app = builder.Build();
 
 //Seed Data
