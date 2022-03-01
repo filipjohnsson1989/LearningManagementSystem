@@ -9,7 +9,9 @@ public class LmsMappings : Profile
     public LmsMappings()
     {
         CreateMap<Course, CourseDto>().ReverseMap();
+        
         CreateMap<Module, ModuleDto>().ReverseMap();
+        CreateMap<ModuleForCreationDto, Module>();
     }
 
 }
